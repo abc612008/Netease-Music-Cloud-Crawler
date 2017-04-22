@@ -1,0 +1,10 @@
+网易云音乐爬虫问题记录：
+1. 发现网易云音乐旧接口只能获得歌单里前1000首歌
+	解决：
+	发现网易云音乐weapi可以返回所有歌的ID
+	参考：
+	https://github.com/metowolf/NeteaseCloudMusicApi/wiki/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90API%E5%88%86%E6%9E%90---weapi
+	https://github.com/metowolf/NeteaseCloudMusicApi
+    https://github.com/darknessomi/musicbox/wiki/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%96%B0%E7%89%88WebAPI%E5%88%86%E6%9E%90%E3%80%82
+2. Python POST请求发上去总是返回空……
+	解决：POST接口要用raw data和url编码(urllib.parse.quote)
